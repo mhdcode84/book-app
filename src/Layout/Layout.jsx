@@ -8,7 +8,7 @@ function Layout({children}) {
         <p><a className='text-[#6552f4] font-[600]' href="https://github.com/mhdcode84/book-app">Github</a> | React.Js Full Course</p>
     </header>
     {children}
-    <footer><p className='text-center bg-[#303030] p-[20px] rounded-[10px] mt-[80px]'>Develop By Mohamad Sajadi ❤</p></footer>
+    <footer><p className='text-center bg-[#303030] p-[20px] rounded-[10px] mt-[80px] text-[20px] '>Develop By Mohamad Sajadi ❤</p></footer>
     </>
   )
 }
