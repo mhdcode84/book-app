@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { CiHeart } from "react-icons/ci";
-function BookCard({ data: { image, title, author, language, pages } }) {
-    const [like, setlike] = useState()
+function BookCard({ data, handlelikedlist}) {
+    const { image, title, author, language, pages } = data
+    const [like, setlike] = useState(false)
     function clickhandler() {
+        handlelikedlist(data,like)
         setlike(like => !like)
     }
 
