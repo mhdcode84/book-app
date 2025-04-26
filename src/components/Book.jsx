@@ -18,13 +18,14 @@ setliked((liked)=>[...liked,book])
 
   }
   return (
-    <div>
-    <div>{books.map(book=>(
+    <div className={liked.length ? "flex": ""}>
+    <div className='flex-1'>{books.map(book=>(
       <BookCard data={book} handlelikedlist={handlelikedlist} key={book.id} />
 
     ))}</div>
-    <h4 className=''>Favorite</h4>
-    {!!liked.length && <div>{liked.map(book=><SideCard data={book} key={book.id} />)}</div>}
+    {!!liked.length && <div className='bg-[#6552f5] p-[15px] rounded-[10px] ml-[20px] h-fit'> 
+      <h4 className='text-[20px] font-medium'>Favorite</h4>
+    {liked.map(book=><SideCard data={book} key={book.id} />)}</div>}
     </div>
   )
 }
